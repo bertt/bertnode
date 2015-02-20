@@ -13,7 +13,7 @@ var router = express.Router();
 // Initial dummy route for testing
 // http://localhost:3000/api
 router.get('/', function(req, res) {
-  res.json({ message: '!!!You are running dangerously low on beer!' });
+  res.json({ message: 'You are running dangerously low on beer!' });
 });
 
 // Register all our routes with /api
