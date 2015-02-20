@@ -1,5 +1,6 @@
 // Get the packages we need
 var express = require('express');
+var path = require('path');
 
 // Create our Express application
 var app = express();
@@ -18,6 +19,9 @@ router.get('/', function(req, res) {
 
 // Register all our routes with /api
 app.use('/api', router);
+// app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 // Start the server
 app.listen(port);
